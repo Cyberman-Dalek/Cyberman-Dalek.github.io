@@ -4,13 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>刘佳文的博客</title>
+  <title>设计模式-抽象工厂 | 刘佳文的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="刘佳文的博客">
-<meta property="og:url" content="https://cyberman-dalek.github.io/index.html">
+  <meta name="description" content="123456789101112131415161718192021public interface Fruit&amp;#123;  public void squeeze();&amp;#125;public  class Apple implements Fruit&amp;#123;  public void squeeze()&amp;#123;    System.out.printIn(&quot;squeeze a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式-抽象工厂">
+<meta property="og:url" content="https://cyberman-dalek.github.io/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82/index.html">
 <meta property="og:site_name" content="刘佳文的博客">
+<meta property="og:description" content="123456789101112131415161718192021public interface Fruit&amp;#123;  public void squeeze();&amp;#125;public  class Apple implements Fruit&amp;#123;  public void squeeze()&amp;#123;    System.out.printIn(&quot;squeeze a">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-01-26T14:24:16.000Z">
+<meta property="article:modified_time" content="2021-01-26T15:09:32.366Z">
 <meta property="article:author" content="刘佳文">
 <meta name="twitter:card" content="summary">
   
@@ -73,9 +77,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-设计模式-抽象工厂" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-设计模式-抽象工厂" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82/" class="article-date">
   <time class="dt-published" datetime="2021-01-26T14:24:16.000Z" itemprop="datePublished">2021-01-26</time>
@@ -88,8 +90,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82/">设计模式-抽象工厂</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      设计模式-抽象工厂
     </h1>
   
 
@@ -118,193 +120,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-设计模式-工厂模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" class="article-date">
-  <time class="dt-published" datetime="2021-01-26T10:24:44.000Z" itemprop="datePublished">2021-01-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">设计模式-工厂模式</a>
-    </h1>
+    <a href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">设计模式-工厂模式</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Fruit</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Apple</span> <span class="keyword">implements</span> <span class="title">Fruit</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.printIn(<span class="string">&quot;eat apple&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Banana</span> <span class="keyword">implements</span> <span class="title">Fruit</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.printIn(<span class="string">&quot;eat banana&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Orange</span> <span class="keyword">implements</span> <span class="title">Fruit</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.printIn(<span class="string">&quot;eat orange&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FruitFactory</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> Fruit <span class="title">getFruitType</span><span class="params">(String fruitName)</span></span>&#123;</span><br><span class="line">    <span class="keyword">switch</span>(fruitnmae) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;Apple&quot;</span>: <span class="keyword">return</span> <span class="keyword">new</span> Apple(); </span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;Banana&quot;</span>: <span class="keyword">return</span> <span class="keyword">new</span> Banana(); </span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;Orange&quot;</span>: <span class="keyword">return</span> <span class="keyword">new</span> Orange(); </span><br><span class="line">        <span class="keyword">default</span>: <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FruitFactoryDemo</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    Fruit Apple = FruitFactory.getfruitType(<span class="string">&quot;Apple&quot;</span>);</span><br><span class="line">    Apple.eat();</span><br><span class="line">    Fruit Banana = FruitFactory.getfruitType(<span class="string">&quot;Banana&quot;</span>);</span><br><span class="line">    Banana.eat();</span><br><span class="line">    Fruit Orange = FruitFactory.getfruitType(<span class="string">&quot;Orange&quot;</span>);</span><br><span class="line">    Orange.eat();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>总结：设置一个工厂类，需要什么对象，工厂类就返回什么对象</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cyberman-dalek.github.io/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" data-id="ckkdusfip000126ms7gsfdiag" data-title="设计模式-工厂模式" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-设计模式-原则" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8E%9F%E5%88%99/" class="article-date">
-  <time class="dt-published" datetime="2021-01-26T10:13:53.000Z" itemprop="datePublished">2021-01-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8E%9F%E5%88%99/">设计模式-原则</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>开闭原则：对扩展开放，对修改关闭。在进行功能拓展的时候，不修改已有的代码。</li>
-<li>里氏代换原则：可以用派生类替换掉基类</li>
-<li>依赖倒转原则：针对接口编程</li>
-<li>接口隔离原则：使用多个隔离的接口，比使用单一接口好</li>
-<li>迪米特法则：低耦合</li>
-<li>合成复用原则：尽量使用合成，而不是继承</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cyberman-dalek.github.io/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8E%9F%E5%88%99/" data-id="ckkdusfim000026ms4swhc5qg" data-title="设计模式-原则" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-设计模式-类型" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%B1%BB%E5%9E%8B/" class="article-date">
-  <time class="dt-published" datetime="2021-01-26T10:09:20.000Z" itemprop="datePublished">2021-01-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%B1%BB%E5%9E%8B/">设计模式-类型</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>创建型模式：创建对象的同时隐藏创建的逻辑</li>
-<li>结构型模式：关注类和对象的组合</li>
-<li>行为型模式：关注对象之间的通信</li>
-<li>J2EE模式：关注表示层</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cyberman-dalek.github.io/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%B1%BB%E5%9E%8B/" data-id="ckkdusfiq000226ms8in7akxs" data-title="设计模式-类型" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-实习记录0126" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/01/26/%E5%AE%9E%E4%B9%A0%E8%AE%B0%E5%BD%950126/" class="article-date">
-  <time class="dt-published" datetime="2021-01-26T03:49:07.000Z" itemprop="datePublished">2021-01-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/26/%E5%AE%9E%E4%B9%A0%E8%AE%B0%E5%BD%950126/">实习记录0126</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>实习项目：报销系统</p>
-<p>技术点：</p>
-<ul>
-<li>Spring Boot</li>
-<li>Kafka</li>
-<li>Redis</li>
-<li>Mybatis通用Mapper</li>
-<li>Spring Cache</li>
-<li>Thrift RPC</li>
-<li>Swagger</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cyberman-dalek.github.io/2021/01/26/%E5%AE%9E%E4%B9%A0%E8%AE%B0%E5%BD%950126/" data-id="ckkdt8huv00000lmsdw43c1fx" data-title="实习记录0126" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
