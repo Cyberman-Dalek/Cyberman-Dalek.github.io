@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>设计模式-责任链模式 | 刘佳文的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1234567891011121314151617181920212223242526public class ChainPatternDemo &amp;#123;      private static AbstractLogger getChainOfLoggers()&amp;#123;       AbstractLogger errorLogger &#x3D; new ErrorLogger(Abstract">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式-责任链模式">
+<meta property="og:url" content="https://cyberman-dalek.github.io/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/index.html">
+<meta property="og:site_name" content="刘佳文的博客">
+<meta property="og:description" content="1234567891011121314151617181920212223242526public class ChainPatternDemo &amp;#123;      private static AbstractLogger getChainOfLoggers()&amp;#123;       AbstractLogger errorLogger &#x3D; new ErrorLogger(Abstract">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-01-27T03:29:47.000Z">
+<meta property="article:modified_time" content="2021-01-27T03:34:19.357Z">
+<meta property="article:author" content="刘佳文">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="刘佳文的博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">刘佳文的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">莫使金樽空对月，人生得意须尽欢</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://cyberman-dalek.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-设计模式-责任链模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/" class="article-date">
+  <time class="dt-published" datetime="2021-01-27T03:29:47.000Z" itemprop="datePublished">2021-01-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      设计模式-责任链模式
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ChainPatternDemo</span> </span>&#123;</span><br><span class="line">   </span><br><span class="line">   <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> AbstractLogger <span class="title">getChainOfLoggers</span><span class="params">()</span></span>&#123;</span><br><span class="line"> </span><br><span class="line">      AbstractLogger errorLogger = <span class="keyword">new</span> ErrorLogger(AbstractLogger.ERROR);</span><br><span class="line">      AbstractLogger fileLogger = <span class="keyword">new</span> FileLogger(AbstractLogger.DEBUG);</span><br><span class="line">      AbstractLogger consoleLogger = <span class="keyword">new</span> ConsoleLogger(AbstractLogger.INFO);</span><br><span class="line"> </span><br><span class="line">      errorLogger.setNextLogger(fileLogger);</span><br><span class="line">      fileLogger.setNextLogger(consoleLogger);</span><br><span class="line"> </span><br><span class="line">      <span class="keyword">return</span> errorLogger;  </span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">      AbstractLogger loggerChain = getChainOfLoggers();</span><br><span class="line"> </span><br><span class="line">      loggerChain.logMessage(AbstractLogger.INFO, <span class="string">&quot;This is an information.&quot;</span>);</span><br><span class="line"> </span><br><span class="line">      loggerChain.logMessage(AbstractLogger.DEBUG, </span><br><span class="line">         <span class="string">&quot;This is a debug level information.&quot;</span>);</span><br><span class="line"> </span><br><span class="line">      loggerChain.logMessage(AbstractLogger.ERROR, </span><br><span class="line">         <span class="string">&quot;This is an error information.&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cyberman-dalek.github.io/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/" data-id="ckkeyezju000e6kms6fobajwu" data-title="设计模式-责任链模式" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          设计模式-命令模式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">设计模式-代理模式</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AE%80%E5%8D%95%E7%BD%97%E5%88%97/">设计模式-简单罗列</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">设计模式-策略模式</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%A9%BA%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%BC%8F/">设计模式-空对象模式</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/">设计模式-状态模式</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/">设计模式-观察者模式</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 刘佳文<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -75,10 +75,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-设计模式-桥接模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-设计模式-简单罗列" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/" class="article-date">
-  <time class="dt-published" datetime="2021-01-27T02:21:02.000Z" itemprop="datePublished">2021-01-27</time>
+    <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AE%80%E5%8D%95%E7%BD%97%E5%88%97/" class="article-date">
+  <time class="dt-published" datetime="2021-01-27T04:53:13.000Z" itemprop="datePublished">2021-01-27</time>
 </a>
     
   </div>
@@ -89,7 +89,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">设计模式-桥接模式</a>
+      <a class="p-name article-title" href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AE%80%E5%8D%95%E7%BD%97%E5%88%97/">设计模式-简单罗列</a>
     </h1>
   
 
@@ -97,28 +97,11 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Client</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//白色</span></span><br><span class="line">        Color white = <span class="keyword">new</span> White();</span><br><span class="line">        <span class="comment">//正方形</span></span><br><span class="line">        Shape square = <span class="keyword">new</span> Square();</span><br><span class="line">        <span class="comment">//白色的正方形</span></span><br><span class="line">        square.setColor(white);</span><br><span class="line">        square.draw();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//长方形</span></span><br><span class="line">        Shape rectange = <span class="keyword">new</span> Rectangle();</span><br><span class="line">        rectange.setColor(white);</span><br><span class="line">        rectange.draw();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>​    我们要实现红黄蓝的正方形和长方形</p>
-<ul>
-<li>普通做法：正方形和长方形继承形状，红黄蓝的正方形继承正方形，红黄蓝的长方形继承长方形</li>
-<li>桥接模式：长方形和正方形继承形状，红黄蓝继承颜色，然后组合形成红黄蓝的正方形和长方形</li>
-</ul>
-<p>我们要增加红黄蓝的圆形</p>
-<ul>
-<li>普通做法：实现圆形和红黄蓝的圆形</li>
-<li>桥接模式：实现圆形，组合形成红黄蓝的圆形</li>
-</ul>
-<p>我们要增加绿色</p>
-<ul>
-<li>普通做法：实现绿色的正方形、长方形和圆形</li>
-<li>桥接模式：实现绿色，组合形成绿色正方形、长方形和圆形</li>
-</ul>
-<p>总结：桥接模式就是组合抽象（形状）与具体（颜色）</p>
-
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cyberman-dalek.github.io/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/" data-id="ckketlx3d0003nemsca4qeor6" data-title="设计模式-桥接模式" class="article-share-link">分享</a>
+      <a data-url="https://cyberman-dalek.github.io/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AE%80%E5%8D%95%E7%BD%97%E5%88%97/" data-id="ckkeyezjr00096kms25cfcbco" data-title="设计模式-简单罗列" class="article-share-link">分享</a>
       
       
       
@@ -130,10 +113,10 @@
 
 
   
-    <article id="post-设计模式-适配器模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-设计模式-策略模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/" class="article-date">
-  <time class="dt-published" datetime="2021-01-27T02:07:44.000Z" itemprop="datePublished">2021-01-27</time>
+    <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/" class="article-date">
+  <time class="dt-published" datetime="2021-01-27T03:55:59.000Z" itemprop="datePublished">2021-01-27</time>
 </a>
     
   </div>
@@ -144,7 +127,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">设计模式-适配器模式</a>
+      <a class="p-name article-title" href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">设计模式-策略模式</a>
     </h1>
   
 
@@ -152,13 +135,11 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MediaAdapter</span> <span class="keyword">implements</span> <span class="title">MediaPlayer</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">   AdvancedMediaPlayer advancedMusicPlayer;</span><br><span class="line"> </span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">MediaAdapter</span><span class="params">(String audioType)</span></span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(audioType.equalsIgnoreCase(<span class="string">&quot;vlc&quot;</span>) )&#123;</span><br><span class="line">         advancedMusicPlayer = <span class="keyword">new</span> VlcPlayer();       </span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (audioType.equalsIgnoreCase(<span class="string">&quot;mp4&quot;</span>))&#123;</span><br><span class="line">         advancedMusicPlayer = <span class="keyword">new</span> Mp4Player();</span><br><span class="line">      &#125;  </span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   <span class="meta">@Override</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">play</span><span class="params">(String audioType, String fileName)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(audioType.equalsIgnoreCase(<span class="string">&quot;vlc&quot;</span>))&#123;</span><br><span class="line">         advancedMusicPlayer.playVlc(fileName);</span><br><span class="line">      &#125;<span class="keyword">else</span> <span class="keyword">if</span>(audioType.equalsIgnoreCase(<span class="string">&quot;mp4&quot;</span>))&#123;</span><br><span class="line">         advancedMusicPlayer.playMp4(fileName);</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>适配器实现的A接口，但是实际上使用的B接口的功能</p>
-
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cyberman-dalek.github.io/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/" data-id="ckketlx3e0004nemsfkrh8cet" data-title="设计模式-适配器模式" class="article-share-link">分享</a>
+      <a data-url="https://cyberman-dalek.github.io/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/" data-id="ckkeyezjq00086kmsbsaz40jn" data-title="设计模式-策略模式" class="article-share-link">分享</a>
       
       
       
@@ -170,10 +151,10 @@
 
 
   
-    <article id="post-设计模式-原型模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-设计模式-空对象模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/" class="article-date">
-  <time class="dt-published" datetime="2021-01-27T01:55:14.000Z" itemprop="datePublished">2021-01-27</time>
+    <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%A9%BA%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%BC%8F/" class="article-date">
+  <time class="dt-published" datetime="2021-01-27T03:54:25.000Z" itemprop="datePublished">2021-01-27</time>
 </a>
     
   </div>
@@ -184,7 +165,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/">设计模式-原型模式</a>
+      <a class="p-name article-title" href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%A9%BA%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%BC%8F/">设计模式-空对象模式</a>
     </h1>
   
 
@@ -192,14 +173,13 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Hashtable;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ShapeCache</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">static</span> Hashtable&lt;String, Shape&gt; shapeMap </span><br><span class="line">      = <span class="keyword">new</span> Hashtable&lt;String, Shape&gt;();</span><br><span class="line"> </span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Shape <span class="title">getShape</span><span class="params">(String shapeId)</span> </span>&#123;</span><br><span class="line">      Shape cachedShape = shapeMap.get(shapeId);</span><br><span class="line">      <span class="keyword">return</span> (Shape) cachedShape.clone();</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">loadCache</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      Circle circle = <span class="keyword">new</span> Circle();</span><br><span class="line">      circle.setId(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">      shapeMap.put(circle.getId(),circle);</span><br><span class="line"> </span><br><span class="line">      Square square = <span class="keyword">new</span> Square();</span><br><span class="line">      square.setId(<span class="string">&quot;2&quot;</span>);</span><br><span class="line">      shapeMap.put(square.getId(),square);</span><br><span class="line"> </span><br><span class="line">      Rectangle rectangle = <span class="keyword">new</span> Rectangle();</span><br><span class="line">      rectangle.setId(<span class="string">&quot;3&quot;</span>);</span><br><span class="line">      shapeMap.put(rectangle.getId(),rectangle);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PrototypePatternDemo</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">      ShapeCache.loadCache();</span><br><span class="line"> </span><br><span class="line">      Shape clonedShape = (Shape) ShapeCache.getShape(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">      System.out.println(<span class="string">&quot;Shape : &quot;</span> + clonedShape.getType());        </span><br><span class="line"> </span><br><span class="line">      Shape clonedShape2 = (Shape) ShapeCache.getShape(<span class="string">&quot;2&quot;</span>);</span><br><span class="line">      System.out.println(<span class="string">&quot;Shape : &quot;</span> + clonedShape2.getType());        </span><br><span class="line"> </span><br><span class="line">      Shape clonedShape3 = (Shape) ShapeCache.getShape(<span class="string">&quot;3&quot;</span>);</span><br><span class="line">      System.out.println(<span class="string">&quot;Shape : &quot;</span> + clonedShape3.getType());        </span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>创建某个对象代价很大，我们可以缓存这个对象，再次创建的时候，返回缓存对象的克隆。</p>
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NullCustomer</span> <span class="keyword">extends</span> <span class="title">AbstractCustomer</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">   <span class="meta">@Override</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">&quot;Not Available in Customer Database&quot;</span>;</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   <span class="meta">@Override</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isNil</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​    使用空对象代替null。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cyberman-dalek.github.io/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/" data-id="ckketlx3b0001nems85p0c9tk" data-title="设计模式-原型模式" class="article-share-link">分享</a>
+      <a data-url="https://cyberman-dalek.github.io/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%A9%BA%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%BC%8F/" data-id="ckkeyezjp00076kmsgs026cgu" data-title="设计模式-空对象模式" class="article-share-link">分享</a>
       
       
       
@@ -211,10 +191,10 @@
 
 
   
-    <article id="post-设计模式-建造者模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-设计模式-状态模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/" class="article-date">
-  <time class="dt-published" datetime="2021-01-27T01:36:12.000Z" itemprop="datePublished">2021-01-27</time>
+    <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/" class="article-date">
+  <time class="dt-published" datetime="2021-01-27T03:51:41.000Z" itemprop="datePublished">2021-01-27</time>
 </a>
     
   </div>
@@ -225,7 +205,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">设计模式-建造者模式</a>
+      <a class="p-name article-title" href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/">设计模式-状态模式</a>
     </h1>
   
 
@@ -233,13 +213,11 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MealBuilder</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">   <span class="function"><span class="keyword">public</span> Meal <span class="title">prepareVegMeal</span> <span class="params">()</span></span>&#123;</span><br><span class="line">      Meal meal = <span class="keyword">new</span> Meal();</span><br><span class="line">      meal.addItem(<span class="keyword">new</span> VegBurger());</span><br><span class="line">      meal.addItem(<span class="keyword">new</span> Coke());</span><br><span class="line">      <span class="keyword">return</span> meal;</span><br><span class="line">   &#125;   </span><br><span class="line"> </span><br><span class="line">   <span class="function"><span class="keyword">public</span> Meal <span class="title">prepareNonVegMeal</span> <span class="params">()</span></span>&#123;</span><br><span class="line">      Meal meal = <span class="keyword">new</span> Meal();</span><br><span class="line">      meal.addItem(<span class="keyword">new</span> ChickenBurger());</span><br><span class="line">      meal.addItem(<span class="keyword">new</span> Pepsi());</span><br><span class="line">      <span class="keyword">return</span> meal;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>用简单对象构建复杂对象</p>
-
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cyberman-dalek.github.io/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/" data-id="ckketlx3c0002nems6b4r1uhp" data-title="设计模式-建造者模式" class="article-share-link">分享</a>
+      <a data-url="https://cyberman-dalek.github.io/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/" data-id="ckkeyezjp00066kmsaohqdg0m" data-title="设计模式-状态模式" class="article-share-link">分享</a>
       
       
       
@@ -251,10 +229,10 @@
 
 
   
-    <article id="post-设计模式-单例模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-设计模式-观察者模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" class="article-date">
-  <time class="dt-published" datetime="2021-01-26T15:29:59.000Z" itemprop="datePublished">2021-01-26</time>
+    <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/" class="article-date">
+  <time class="dt-published" datetime="2021-01-27T03:46:19.000Z" itemprop="datePublished">2021-01-27</time>
 </a>
     
   </div>
@@ -265,7 +243,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">设计模式-单例模式</a>
+      <a class="p-name article-title" href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/">设计模式-观察者模式</a>
     </h1>
   
 
@@ -273,25 +251,12 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> instance;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonPatternDemo</span></span>&#123;</span><br><span class="line">  Singleton singleton = Singleton.getInstance();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>几种实现方式</p>
-<ol>
-<li><p>懒汉式，线程不安全</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> instance;</span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (instance == <span class="keyword">null</span>)</span><br><span class="line">      instance = Singleton();</span><br><span class="line">    <span class="keyword">return</span> instance;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>懒汉式，线程安全</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> instance;</span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (instance == <span class="keyword">null</span>)</span><br><span class="line">      instance = Singleton();</span><br><span class="line">    <span class="keyword">return</span> instance;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>饿汉式</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> instance;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>双重校验锁</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span></span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> instance;</span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (instance == <span class="keyword">null</span>)&#123;</span><br><span class="line">        <span class="keyword">synchronized</span>(Singleton.class)&#123;</span><br><span class="line">          <span class="keyword">if</span> (instance == <span class="keyword">null</span>)</span><br><span class="line">            instance = Singleton();</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    <span class="keyword">return</span> instance;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+        <p>当一个对象被修改时，则会自动通知依赖它的对象。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cyberman-dalek.github.io/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" data-id="ckketlx360000nemseph62do2" data-title="设计模式-单例模式" class="article-share-link">分享</a>
+      <a data-url="https://cyberman-dalek.github.io/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/" data-id="ckkeyezjt000c6kms0x1b1769" data-title="设计模式-观察者模式" class="article-share-link">分享</a>
       
       
       
@@ -303,10 +268,10 @@
 
 
   
-    <article id="post-设计模式-抽象工厂" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-设计模式-备忘录模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82/" class="article-date">
-  <time class="dt-published" datetime="2021-01-26T14:24:16.000Z" itemprop="datePublished">2021-01-26</time>
+    <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F/" class="article-date">
+  <time class="dt-published" datetime="2021-01-27T03:44:00.000Z" itemprop="datePublished">2021-01-27</time>
 </a>
     
   </div>
@@ -317,7 +282,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82/">设计模式-抽象工厂</a>
+      <a class="p-name article-title" href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F/">设计模式-备忘录模式</a>
     </h1>
   
 
@@ -325,21 +290,11 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Fruit</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">squeeze</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Apple</span> <span class="keyword">implements</span> <span class="title">Fruit</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">squeeze</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.printIn(<span class="string">&quot;squeeze apple&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Banana</span> <span class="keyword">implements</span> <span class="title">Fruit</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">squeeze</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.printIn(<span class="string">&quot;squeeze banana&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Orange</span> <span class="keyword">implements</span> <span class="title">Fruit</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">squeeze</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.printIn(<span class="string">&quot;squeeze orange&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Vegetable</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">boil</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Potato</span> <span class="keyword">implements</span> <span class="title">Vegetable</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">boil</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.printIn(<span class="string">&quot;boil potato&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Onion</span> <span class="keyword">implements</span> <span class="title">Vegetable</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">boil</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.printIn(<span class="string">&quot;boil Onion&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Carrot</span> <span class="keyword">implements</span> <span class="title">Vegetable</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">boil</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.printIn(<span class="string">&quot;boil carrot&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">FoodFactory</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> Fruit <span class="title">getFruitType</span><span class="params">(String fruitName)</span></span>; </span><br><span class="line">  <span class="function"><span class="keyword">public</span> Vegetable <span class="title">getVegetableType</span><span class="params">(String vegetableName)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FruitFactory</span> <span class="keyword">implements</span> <span class="title">FoodFactory</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> Fruit <span class="title">getFruitType</span><span class="params">(String fruitName)</span></span>&#123;</span><br><span class="line">    <span class="keyword">switch</span>(fruitNmae) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;Apple&quot;</span>: <span class="keyword">return</span> <span class="keyword">new</span> Apple(); </span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;Banana&quot;</span>: <span class="keyword">return</span> <span class="keyword">new</span> Banana(); </span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;Orange&quot;</span>: <span class="keyword">return</span> <span class="keyword">new</span> Orange(); </span><br><span class="line">        <span class="keyword">default</span>: <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> Vegetable <span class="title">getVegetableType</span><span class="params">(String vegetableName)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">VegetableFactory</span> <span class="keyword">implements</span> <span class="title">FoodFactory</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> Vegetable <span class="title">getVegetableType</span><span class="params">(String vegetableName)</span></span>&#123;</span><br><span class="line">    <span class="keyword">switch</span>(vegetableNmae) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;Potato&quot;</span>: <span class="keyword">return</span> <span class="keyword">new</span> Potato(); </span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;Onion&quot;</span>: <span class="keyword">return</span> <span class="keyword">new</span> Onion(); </span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;Carrot&quot;</span>: <span class="keyword">return</span> <span class="keyword">new</span> Carrot(); </span><br><span class="line">        <span class="keyword">default</span>: <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> Fruit <span class="title">getFruitType</span><span class="params">(String fruitName)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FactoryProducer</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> FoodFactory <span class="title">getFactorytType</span><span class="params">(String factoryName)</span></span>&#123;</span><br><span class="line">    <span class="keyword">switch</span>(factoryName)&#123;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">&quot;FruitFactory&quot;</span>: <span class="keyword">return</span> FruitFactory();</span><br><span class="line">      <span class="keyword">case</span> <span class="string">&quot;VegetableFactory&quot;</span>: <span class="keyword">return</span> FruitFactory();</span><br><span class="line">      <span class="keyword">default</span>: <span class="keyword">null</span>;  </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AbstractFactoryDemo</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    FoodFactory fruitFactory = FactoryProducer.getFactoryType(<span class="string">&quot;FruitFactory&quot;</span>);</span><br><span class="line">    Fruit apple = fruitFactory.getfruitType(<span class="string">&quot;Apple&quot;</span>);</span><br><span class="line">    apple.squeeze();</span><br><span class="line">    Fruit banana = fruitFactory.getfruitType(<span class="string">&quot;Banana&quot;</span>);</span><br><span class="line">    banana.squeeze();</span><br><span class="line">    Fruit orange = FruitFactory.getfruitType(<span class="string">&quot;Orange&quot;</span>);</span><br><span class="line">    orange.squeeze();</span><br><span class="line">    </span><br><span class="line">    FoodFactory vegetableFactory = FactoryProducer.getFactoryType(<span class="string">&quot;VegetableFactory&quot;</span>);</span><br><span class="line">    Vegetable potato = vegetableFactory.getVegetableType(<span class="string">&quot;Potato&quot;</span>);</span><br><span class="line">    potato.boil();</span><br><span class="line">    Vegetable onion = vegetableFactory.getVegetableType(<span class="string">&quot;Onion&quot;</span>);</span><br><span class="line">    onion.boil();</span><br><span class="line">    Vegetable carrot = VegetableFactory.getVegetableType(<span class="string">&quot;Carrot&quot;</span>);</span><br><span class="line">    carrot.boil();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>总结：</p>
-<ul>
-<li>不同产品类型对应不同工厂，在不同工厂基础上再抽象出抽象工厂</li>
-<li>需要创建对象的时候，先获取对应工厂，再获取相应产品</li>
-</ul>
-
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cyberman-dalek.github.io/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82/" data-id="ckke4yitq0000ofms2c7z77uh" data-title="设计模式-抽象工厂" class="article-share-link">分享</a>
+      <a data-url="https://cyberman-dalek.github.io/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F/" data-id="ckkeyezjn00046kms7pop8bmk" data-title="设计模式-备忘录模式" class="article-share-link">分享</a>
       
       
       
@@ -351,10 +306,10 @@
 
 
   
-    <article id="post-设计模式-工厂模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-设计模式-中介者模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" class="article-date">
-  <time class="dt-published" datetime="2021-01-26T10:24:44.000Z" itemprop="datePublished">2021-01-26</time>
+    <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/" class="article-date">
+  <time class="dt-published" datetime="2021-01-27T03:43:14.000Z" itemprop="datePublished">2021-01-27</time>
 </a>
     
   </div>
@@ -365,7 +320,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">设计模式-工厂模式</a>
+      <a class="p-name article-title" href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/">设计模式-中介者模式</a>
     </h1>
   
 
@@ -373,16 +328,11 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Fruit</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Apple</span> <span class="keyword">implements</span> <span class="title">Fruit</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.printIn(<span class="string">&quot;eat apple&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Banana</span> <span class="keyword">implements</span> <span class="title">Fruit</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.printIn(<span class="string">&quot;eat banana&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>  <span class="class"><span class="keyword">class</span> <span class="title">Orange</span> <span class="keyword">implements</span> <span class="title">Fruit</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.printIn(<span class="string">&quot;eat orange&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FruitFactory</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> Fruit <span class="title">getFruitType</span><span class="params">(String fruitName)</span></span>&#123;</span><br><span class="line">    <span class="keyword">switch</span>(fruitnmae) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;Apple&quot;</span>: <span class="keyword">return</span> <span class="keyword">new</span> Apple(); </span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;Banana&quot;</span>: <span class="keyword">return</span> <span class="keyword">new</span> Banana(); </span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;Orange&quot;</span>: <span class="keyword">return</span> <span class="keyword">new</span> Orange(); </span><br><span class="line">        <span class="keyword">default</span>: <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FruitFactoryDemo</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    Fruit Apple = FruitFactory.getfruitType(<span class="string">&quot;Apple&quot;</span>);</span><br><span class="line">    Apple.eat();</span><br><span class="line">    Fruit Banana = FruitFactory.getfruitType(<span class="string">&quot;Banana&quot;</span>);</span><br><span class="line">    Banana.eat();</span><br><span class="line">    Fruit Orange = FruitFactory.getfruitType(<span class="string">&quot;Orange&quot;</span>);</span><br><span class="line">    Orange.eat();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>总结：设置一个工厂类，需要什么对象，工厂类就返回什么对象</p>
-
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cyberman-dalek.github.io/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" data-id="ckkdusfip000126ms7gsfdiag" data-title="设计模式-工厂模式" class="article-share-link">分享</a>
+      <a data-url="https://cyberman-dalek.github.io/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/" data-id="ckkeyezjl00016kms3f4wd7hu" data-title="设计模式-中介者模式" class="article-share-link">分享</a>
       
       
       
@@ -394,10 +344,10 @@
 
 
   
-    <article id="post-设计模式-原则" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-设计模式-迭代器模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8E%9F%E5%88%99/" class="article-date">
-  <time class="dt-published" datetime="2021-01-26T10:13:53.000Z" itemprop="datePublished">2021-01-26</time>
+    <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/" class="article-date">
+  <time class="dt-published" datetime="2021-01-27T03:42:18.000Z" itemprop="datePublished">2021-01-27</time>
 </a>
     
   </div>
@@ -408,7 +358,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8E%9F%E5%88%99/">设计模式-原则</a>
+      <a class="p-name article-title" href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/">设计模式-迭代器模式</a>
     </h1>
   
 
@@ -416,19 +366,11 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <ul>
-<li>开闭原则：对扩展开放，对修改关闭。在进行功能拓展的时候，不修改已有的代码。</li>
-<li>里氏代换原则：可以用派生类替换掉基类</li>
-<li>依赖倒转原则：针对接口编程</li>
-<li>接口隔离原则：使用多个隔离的接口，比使用单一接口好</li>
-<li>迪米特法则：低耦合</li>
-<li>合成复用原则：尽量使用合成，而不是继承</li>
-</ul>
-
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cyberman-dalek.github.io/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8E%9F%E5%88%99/" data-id="ckkdusfim000026ms4swhc5qg" data-title="设计模式-原则" class="article-share-link">分享</a>
+      <a data-url="https://cyberman-dalek.github.io/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/" data-id="ckkeyezjv000f6kmse4sm6cfh" data-title="设计模式-迭代器模式" class="article-share-link">分享</a>
       
       
       
@@ -440,10 +382,10 @@
 
 
   
-    <article id="post-设计模式-类型" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-设计模式-解释器模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%B1%BB%E5%9E%8B/" class="article-date">
-  <time class="dt-published" datetime="2021-01-26T10:09:20.000Z" itemprop="datePublished">2021-01-26</time>
+    <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F/" class="article-date">
+  <time class="dt-published" datetime="2021-01-27T03:39:43.000Z" itemprop="datePublished">2021-01-27</time>
 </a>
     
   </div>
@@ -454,7 +396,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%B1%BB%E5%9E%8B/">设计模式-类型</a>
+      <a class="p-name article-title" href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F/">设计模式-解释器模式</a>
     </h1>
   
 
@@ -462,17 +404,11 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <ul>
-<li>创建型模式：创建对象的同时隐藏创建的逻辑</li>
-<li>结构型模式：关注类和对象的组合</li>
-<li>行为型模式：关注对象之间的通信</li>
-<li>J2EE模式：关注表示层</li>
-</ul>
-
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cyberman-dalek.github.io/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%B1%BB%E5%9E%8B/" data-id="ckkdusfiq000226ms8in7akxs" data-title="设计模式-类型" class="article-share-link">分享</a>
+      <a data-url="https://cyberman-dalek.github.io/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F/" data-id="ckkeyezju000d6kmsh1tpdzpv" data-title="设计模式-解释器模式" class="article-share-link">分享</a>
       
       
       
@@ -484,10 +420,10 @@
 
 
   
-    <article id="post-实习记录0126" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-设计模式-命令模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/01/26/%E5%AE%9E%E4%B9%A0%E8%AE%B0%E5%BD%950126/" class="article-date">
-  <time class="dt-published" datetime="2021-01-26T03:49:07.000Z" itemprop="datePublished">2021-01-26</time>
+    <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/" class="article-date">
+  <time class="dt-published" datetime="2021-01-27T03:34:49.000Z" itemprop="datePublished">2021-01-27</time>
 </a>
     
   </div>
@@ -498,7 +434,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/26/%E5%AE%9E%E4%B9%A0%E8%AE%B0%E5%BD%950126/">实习记录0126</a>
+      <a class="p-name article-title" href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/">设计模式-命令模式</a>
     </h1>
   
 
@@ -506,22 +442,11 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>实习项目：报销系统</p>
-<p>技术点：</p>
-<ul>
-<li>Spring Boot</li>
-<li>Kafka</li>
-<li>Redis</li>
-<li>Mybatis通用Mapper</li>
-<li>Spring Cache</li>
-<li>Thrift RPC</li>
-<li>Swagger</li>
-</ul>
-
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cyberman-dalek.github.io/2021/01/26/%E5%AE%9E%E4%B9%A0%E8%AE%B0%E5%BD%950126/" data-id="ckkdt8huv00000lmsdw43c1fx" data-title="实习记录0126" class="article-share-link">分享</a>
+      <a data-url="https://cyberman-dalek.github.io/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/" data-id="ckkeyezjn00036kms6o204qxs" data-title="设计模式-命令模式" class="article-share-link">分享</a>
       
       
       
@@ -534,6 +459,11 @@
 
   
 
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
+  </nav>
 
 </section>
         
@@ -564,23 +494,23 @@
       <ul>
         
           <li>
-            <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">设计模式-桥接模式</a>
+            <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AE%80%E5%8D%95%E7%BD%97%E5%88%97/">设计模式-简单罗列</a>
           </li>
         
           <li>
-            <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">设计模式-适配器模式</a>
+            <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">设计模式-策略模式</a>
           </li>
         
           <li>
-            <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/">设计模式-原型模式</a>
+            <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%A9%BA%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%BC%8F/">设计模式-空对象模式</a>
           </li>
         
           <li>
-            <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">设计模式-建造者模式</a>
+            <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/">设计模式-状态模式</a>
           </li>
         
           <li>
-            <a href="/2021/01/26/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">设计模式-单例模式</a>
+            <a href="/2021/01/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/">设计模式-观察者模式</a>
           </li>
         
       </ul>
